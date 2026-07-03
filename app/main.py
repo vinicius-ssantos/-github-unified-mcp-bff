@@ -11,7 +11,6 @@ from app.auth import router as auth_router
 from app.capabilities import router as capabilities_router
 from app.config import get_settings
 from app.middleware import SecurityHeadersMiddleware
-from app.operations import router as operations_router
 from app.proxy import router as proxy_router
 
 _settings = get_settings()
@@ -61,4 +60,3 @@ app.include_router(proxy_router)
 app.include_router(auth_router)
 app.include_router(audit_router)
 app.include_router(capabilities_router)
-app.include_router(operations_router)
